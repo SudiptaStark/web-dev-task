@@ -1,0 +1,243 @@
+p, h1, h2{
+    margin: 3px;
+}
+h1, h2{
+    color: #e75f00;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'PT Sans', sans-serif;
+}
+button{
+    transition: all 0.2s;
+}
+button:hover{
+    opacity: 80%;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.436);
+}
+header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.left{
+    font-size: 1.5vw;
+    margin-left: 4vw;
+    width: 40vw;
+    min-width: fit-content;
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 225px;
+}
+.left ul{
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.midddle button{
+    font-size: 1.5vw;
+    background-color: #e75f00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.right img{
+    height: 40px;
+    margin: 1vw;
+    transition: all 0.3s;
+}
+.right img:hover{
+    filter: brightness(70%);
+}
+.right .Settings{
+    transition: transform 1s;
+    margin-left: 2vw;
+}
+.right .Settings:hover{
+    transform: rotate(180deg);
+    filter: none;
+}
+
+
+main{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 50px;
+    height: 80vw;
+    background-image: url("bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main .search button{
+    margin-top: 10px;
+    padding: 6px;
+    padding-left: 10px;
+    display: inline;
+    background-color: #1c1c1c;
+    color: white;
+    font-size: 16px;
+    width: max-content;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+main .search-bar{
+    margin-top: 10px;
+    margin-left: -1px;
+    padding-left: 2px;
+    display: inline;
+    height: 30px;
+    background-color: #1c1c1c;
+    color: white;
+    font-size: 16px;
+    width: max-content;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+main .search-bar::placeholder{
+    font-size: 14px;
+    color: white;
+}
+
+
+footer{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #000000;
+    background-image: linear-gradient(#000000 0%, #0f0f0f 74%);
+}
+footer .container button{
+    font-size: 2.5vw;
+    margin-right: 20px;
+    background-color: #e75f00;
+    color: white;
+    border: none;
+    border-radius: 17px;
+    width: fit-content;
+    padding: 20px 30px; 
+}
+.circle{
+    width: 400px;
+    height: 400px;
+    border: 3px dashed white;
+    border-radius: 50%;
+    animation: Color 4s linear infinite;
+}
+.icons img:hover{
+    transform: scale(110%);
+    cursor: pointer;
+}
+.MASTER{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    display: inline;
+    padding: 10px;
+    white-space: nowrap;
+    border-radius: 10px;
+    position: relative;
+    left: -185px; 
+    bottom: 270px;
+    color: gainsboro;
+    animation: Color2 3s linear infinite;
+}
+@keyframes Color2{
+    0%{
+        background-color: #ffcb43; 
+    }
+    40%{
+        background-color: #e75f00;
+    }
+    80%{
+        background-color: #ff0016;
+    }
+    100%{
+        background-color: #e7c100;
+    }
+  }
+
+@keyframes Color{
+    0%{
+        border-color: #9267ff;
+    }
+    10%{
+        border-color: indigo;
+    }
+    20%{
+        border-color: #12c0ff;
+    }
+    30%{
+        border-color: teal;
+    }
+    40%{
+        border-color: #a1fc40;
+    }
+    50%{
+        border-color: #ffc126;
+    }
+    60%{
+        border-color: #e75f00;
+    }
+    70%{
+        border-color: #ff4a26;
+    }
+    80%{
+        border-color: #ff4659;
+    }
+    90%{
+        border-color: #ff46f6;
+    }
+    100%{
+        border-color: #c742fc;
+    }
+  }
+@keyframes size{
+    0%{
+        width: 400px;
+        height: 400px;
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+    }
+    
+}
+
+
+@media only screen and (max-width:900px){
+    main{
+        padding: 30px 10px;
+    }
+    .right img{
+        height: 20px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .circle{
+        margin-top: 60px;
+    }
+    .MASTER{
+        padding: 8px;
+    }
+}
